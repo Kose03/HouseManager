@@ -15,17 +15,14 @@ namespace HouseManager.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.Entity<Cashier>()
-                .HasOne(o => o.ClientId)
-                .WithMany(p => p.Users)
-                .HasForeignKey(o => o.UserId);
+                            .HasOne(o => o.ClientId)
+                            .WithMany(p => p.Users)
+                            .HasForeignKey(o => o.UserId);
             modelBuilder.Entity<User>()
                 .HasMany(p => p.Users)
                 .WithOne(o => o.ClientId)
                 .HasForeignKey(o => o.UserId);
-
-
         }
     }
 }
