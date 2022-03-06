@@ -8,11 +8,11 @@ namespace HouseManager.Models
         //public virtual ICollection<User>? Users { get; set; }
         public virtual User? ClientId { get; set; }
         public int UserId { get; set; }
-        
+
         [Required]
         [DataType(DataType.Currency)]
         [Display(Name = "Дължима сума")]
-        public double Sum{ get; set; }
+        public double Sum { get; set; }
         [Required]
         [DataType(DataType.Date)]
         [Display(Name = "Краен срок за плащане")]
@@ -20,6 +20,6 @@ namespace HouseManager.Models
         [DataType(DataType.Date)]
         [Display(Name = "Дата на заплащане")]
         public DateTime payDate { get; set; }
-       
+
     }
 }

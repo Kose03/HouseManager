@@ -42,7 +42,7 @@ namespace HouseManager.Models
         [Display(Name = "Членове на домакинството")]
         public string HouseHoldMembers { get; set; }
         public string Role { get; set; }
-        public virtual ICollection<Cashier>? Users { get; set; }
+        public virtual ICollection<Cashier>? Users { get; set; } //ключ към Cashier
 
     }
 }
